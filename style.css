@@ -190,6 +190,26 @@ p { margin: 0 0 1rem; }
 .reflist .venue { font-style: italic; }      /* journal / meeting  */
 .reflist .yr { color: var(--muted); }
 
+/* inline "Paper Link" / "Talk Link" resource links */
+.reslink {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+/* research topic image (optional, for when you add images) */
+.topic-img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  margin: 20px 0 4px;
+}
+.topic-lead { max-width: 60ch; }
+
 .subhead {
   font-family: var(--sans);
   font-weight: 700;
