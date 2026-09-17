@@ -221,6 +221,10 @@ p { margin: 0 0 1rem; }
 }
 .subhead:first-of-type { margin-top: 0; }
 
+/* the two note lines at the top of the publications page */
+.pub-meta { margin-bottom: 22px; }
+.pub-meta p { font-size: 0.9rem; margin: 0 0 3px; }
+
 .note {
   font-size: 0.9rem;
   color: var(--muted);
