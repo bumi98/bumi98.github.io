@@ -204,7 +204,7 @@ p { margin: 0 0 1rem; }
   max-width: 900px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 250px 1fr;
   gap: 34px;
   align-items: start;
 }
@@ -216,7 +216,7 @@ p { margin: 0 0 1rem; }
   border-radius: 8px;
   border: 1px solid var(--line);
 }
-.topic-img { height: auto; }
+.topic-img { height: auto; background: #fff; padding: 8px; margin-top: 18px; }
 .topic-ph {
   aspect-ratio: 4 / 3;
   background: var(--accent-soft);
