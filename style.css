@@ -187,6 +187,7 @@ p { margin: 0 0 1rem; }
   line-height: 1.55;
 }
 .reflist .me { font-weight: 700; }          /* author's own name */
+.reflist.nobold .me { font-weight: 400; }    /* opt out of bolding */
 .reflist .venue { font-style: italic; }      /* journal / meeting  */
 .reflist .yr { color: var(--muted); }
 
@@ -198,17 +199,42 @@ p { margin: 0 0 1rem; }
   white-space: nowrap;
 }
 
-/* research topic image (optional, for when you add images) */
-.topic-img {
+/* research topic: image on the left, heading + papers on the right */
+.topic-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 34px;
+  align-items: start;
+}
+.topic-figure { margin: 0; }
+.topic-img,
+.topic-ph {
   display: block;
   width: 100%;
-  max-width: 520px;
-  height: auto;
   border-radius: 8px;
   border: 1px solid var(--line);
-  margin: 20px 0 4px;
 }
+.topic-img { height: auto; }
+.topic-ph {
+  aspect-ratio: 4 / 3;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+.topic-body h2 { margin-top: 0; }
 .topic-lead { max-width: 60ch; }
+@media (max-width: 620px) {
+  .topic-grid { grid-template-columns: 1fr; gap: 16px; }
+  .topic-ph { max-width: 220px; }
+}
 
 .subhead {
   font-family: var(--sans);
@@ -222,8 +248,8 @@ p { margin: 0 0 1rem; }
 .subhead:first-of-type { margin-top: 0; }
 
 /* the two note lines at the top of the publications page */
-.pub-meta { margin-bottom: 22px; }
-.pub-meta p { font-size: 0.9rem; margin: 0 0 3px; }
+.pub-meta { margin-bottom: 28px; }
+.pub-meta p { font-size: 0.85rem; line-height: 1.45; margin: 0 0 4px; }
 
 .note {
   font-size: 0.9rem;
